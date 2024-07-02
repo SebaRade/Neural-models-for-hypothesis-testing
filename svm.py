@@ -20,6 +20,15 @@ score_90 = clf.score(X_90, y_90)
 score_100 = clf.score(X_100, y_100)
 
 # SVM with noise
+# Subsampling/shuffling images for training and testing
+total_samples = 280000
+sub_samples = 70000
+
+subset_idx = np.random.choice(total_samples, sub_samples)
+X_subset, y_subset = X_mixed[subset_idx], y_mixed[subset_idx]
+print(X_subset.shape)
+print(y_subset.shape)
+
 X_train2, X_test2, y_train2, y_test2 = train_test_split(X_subset, y_subset, test_size=0.3, random_state=0, shuffle=True)
 
 clf2 = SVC()
