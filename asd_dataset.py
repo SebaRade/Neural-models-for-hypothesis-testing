@@ -11,6 +11,8 @@ def shuff():
   y_shuff[ix] = y_shuff_shuff
   return y_shuff
 
+np.random.seed(123)
+
 y_shuff_0 = shuff()
 y_shuff_10 = shuff()
 y_shuff_20 = shuff()
