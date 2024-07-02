@@ -112,8 +112,8 @@ def pred(model, dataset, labels):
 datasets = [X, X_10, X_20, X_30, X_40, X_50, X_60, X_70, X_80, X_90, X_100]
 labels = [y, y_10, y_20, y_30, y_40, y_50, y_60, y_70, y_80, y_90, y_100]
 
-res_nt = [pred(model_base, i, j) for i, j in zip(datasets, labels)]
-res_asd = [pred(model_base, i, j) for i, j in zip(datasets, labels)]
+res_nt = [pred(model_nt, i, j) for i, j in zip(datasets, labels)]
+res_asd = [pred(model_asd, i, j) for i, j in zip(datasets, labels)]
 res_syn = [pred(model_syn, i, j) for i, j in zip(datasets, labels)]
 res_hom = [pred(model_hom, i, j) for i, j in zip(datasets, labels)]
 
