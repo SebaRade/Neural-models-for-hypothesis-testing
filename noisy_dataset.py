@@ -50,12 +50,3 @@ X_mixed = np.concatenate((X, X_10, X_20, X_30), axis=0)
 y_mixed = np.concatenate((y, y_10, y_20, y_30), axis=0)
 print(X_mixed.shape)
 print(y_mixed.shape)
-
-# Subsampling/shuffling images for training and testing
-total_samples = 280000
-sub_samples = 70000
-
-subset_idx = np.random.choice(total_samples, sub_samples)
-X_subset, y_subset = X_mixed[subset_idx], y_mixed[subset_idx]
-print(X_subset.shape)
-print(y_subset.shape)
