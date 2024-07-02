@@ -18,6 +18,8 @@ def noise(factor):
     y_fac = y
     return X_fac, y_fac
 
+np.random.seed(123)
+
 X_10, y_10 = noise(.1)
 X_20, y_20 = noise(.2)
 X_30, y_30 = noise(.3)
