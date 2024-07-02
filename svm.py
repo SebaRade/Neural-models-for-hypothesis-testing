@@ -1,3 +1,5 @@
+import numpy as np
+from numpy import random
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 
