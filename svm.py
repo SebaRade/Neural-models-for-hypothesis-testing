@@ -2,6 +2,8 @@ import numpy as np
 from numpy import random
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # SVM without noise
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0, shuffle=True)
